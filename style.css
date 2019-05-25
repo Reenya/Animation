@@ -1,0 +1,72 @@
+body {
+    background: #2a2a2a;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hen {
+    width: 200px;
+    animation: rotatePak 6s ease-in-out 0s infinite alternate;
+}
+
+.hen__leg {
+    width: 44px;
+    position: relative;
+    top: -21px;
+    transform-origin: center top;
+}
+
+.hen__leg--left {
+    right: -70px;
+    animation: moveLeg .5s .5s infinite alternate;
+}
+
+.hen__leg--right {
+    right: -50px;
+    animation: moveLeg .5s 0s infinite alternate;
+}
+
+.egg {
+    width: 30px;
+    position: relative;
+    left: 50%;
+    bottom: 150px;
+    animation: eggMove 12s ease-in 1s infinite;
+}
+
+@keyframes eggMove {
+    from, 80% {
+        left: 50%;
+        bottom: 130px;
+    }
+
+    95%, to {
+        left: 1000px;
+        bottom: 400px;
+    }
+}
+
+@keyframes rotatePak {
+    from {
+        transform: rotate(30deg);
+    }
+
+    to {
+        transform: rotate(-750deg);
+    }
+}
+
+@keyframes moveLeg {
+    from, 49.9% {
+        transform: rotate(0deg);
+    }
+    50%, to {
+        transform: rotate(30deg);
+    }
+}
+
